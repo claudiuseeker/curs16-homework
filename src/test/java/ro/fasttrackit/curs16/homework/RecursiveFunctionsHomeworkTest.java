@@ -11,7 +11,7 @@ class RecursiveFunctionsHomeworkTest {
     void testSumOfFirstNumbers(){
         RecursiveFunctionsHomework recursiveFunctionsHomework= new RecursiveFunctionsHomework();
         assertThat(recursiveFunctionsHomework.sumOfFirstNumbers(0)).isZero();
-        assertThat(recursiveFunctionsHomework.sumOfFirstNumbers(3)).isEqualTo(6);
+        assertThat(recursiveFunctionsHomework.sumOfFirstNumbers(5)).isEqualTo(15);
         assertThat(recursiveFunctionsHomework.sumOfFirstNumbers(12)).isEqualTo(78);
     }
 
@@ -19,7 +19,7 @@ class RecursiveFunctionsHomeworkTest {
     void testSumOfFirstEvenNumbers(){
         RecursiveFunctionsHomework recursiveFunctionsHomework= new RecursiveFunctionsHomework();
         assertThat(recursiveFunctionsHomework.sumOfFirstEvenNumbers(0)).isZero();
-        assertThat(recursiveFunctionsHomework.sumOfFirstEvenNumbers(2)).isEqualTo(6);
+        assertThat(recursiveFunctionsHomework.sumOfFirstEvenNumbers(3)).isEqualTo(12);
         assertThat(recursiveFunctionsHomework.sumOfFirstEvenNumbers(10)).isEqualTo(110);
     }
 
@@ -34,9 +34,9 @@ class RecursiveFunctionsHomeworkTest {
     @Test
     void testPalindromeSecond(){
         RecursiveFunctionsHomework recursiveFunctionsHomework= new RecursiveFunctionsHomework();
-        assertThat(recursiveFunctionsHomework.palindromeSecond("madam")).isEqualTo("palindrome");
-        assertThat(recursiveFunctionsHomework.palindromeSecond("noon")).isEqualTo("palindrome");
-        assertThat(recursiveFunctionsHomework.palindromeSecond("pizza")).isEqualTo("not a palindrome");
+        assertThat(recursiveFunctionsHomework.palindromeSecond("madam")).isEqualTo(true);
+        assertThat(recursiveFunctionsHomework.palindromeSecond("noon")).isEqualTo(true);
+        assertThat(recursiveFunctionsHomework.palindromeSecond("pizza")).isEqualTo(false);
     }
     @Test
     void testDigitSum(){

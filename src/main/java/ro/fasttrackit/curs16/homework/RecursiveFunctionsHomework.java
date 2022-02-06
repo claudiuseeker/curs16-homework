@@ -6,15 +6,17 @@ public class RecursiveFunctionsHomework {
         if (number == 0) {
             return 0;
         } else {
-            return (number * (number + 1)) / 2;
+            //return (number * (number + 1)) / 2;
+            return  number + sumOfFirstNumbers(number-1) ;
         }
     }
 
     public int sumOfFirstEvenNumbers(int number) {
         if (number == 0) {
             return 0;
-        } else {
-            return (number * (number + 1));
+
+        }else{
+            return number*2 + sumOfFirstEvenNumbers(number-1);
         }
     }
 
@@ -26,11 +28,11 @@ public class RecursiveFunctionsHomework {
         }
     }
 
-    public String palindromeSecond(String word) {
+    public boolean palindromeSecond(String word) {
         if (word.length() <= 1) {
-            return "palindrome";
+            return true;
         } else if (word.charAt(0) != word.charAt(word.length() - 1)) {
-            return "not a palindrome";
+            return false;
         }
         return palindromeSecond(word.substring(1, word.length() - 1));
     }
@@ -44,17 +46,12 @@ public class RecursiveFunctionsHomework {
     }
 
     public int fibonacci(int element) {
-        int f[] = new int[element + 2];
+        int f[] = new int[element];
         if (element <= 1) {
             return element;
         } else {
-            int i;
-            f[0] = 0;
-            f[1] = 1;
-            for (i = 2; i < element; i++) {
-                f[i] = f[i - 1] + f[i - 2];
-            }
-            return f[element];
+            return fibonacci(element-1) + fibonacci(element-2);
+
         }
 
     }
